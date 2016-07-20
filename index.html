@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BRIT + CO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Poppins:700' rel='stylesheet' type='text/css'>
+	<script src="https://use.fontawesome.com/6635264cf5.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<nav class="navbar navbar-default">
+		<div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button>
+		      	<a class="navbar-brand" href="#">
+		      		<h3><span class="span1">BRIT</span> <span class="span2">+</span> <span class="span3">CO</span></h3>
+		      	</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav">
+			        <li><a href="#">CATEGORIES</a></li>
+			        <li><a href="#">NEWS</a></li>
+			        <li><a href="#">VIDEOS</a></li>
+			        <li><a href="#">CLASSES</a></li>
+			        <li><a href="#">SHOP</a></li>
+			    </ul>
+		    <ul class="sidemenu">
+				<li class="searchbox">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</li>
+				<li class="cart">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</li>
+				<li class="signin">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<P>LOG IN / SIGN UP</P>
+
+				</li>
+				
+		    </ul><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container-fluid" ng-controller="myCtrl">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{ product1.img }}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+				<div class="productinfo">
+					<div class="infowords">
+						<p class="infodescription">{{ product1.description}}</p>
+						<p class="infoprice"><b>{{ product1.price | currency}}</b></p>
+					</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{ product2.img }}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+				<div class="productinfo">
+					<div class="infowords">
+						<p class="infodescription">{{ product2.description}}</p>
+						<p class="infoprice"><b>{{ product2.price | currency}}</b></p>
+					</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product3.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">
+							<p class="infodescription">{{ product3.description}}</p>
+							<p class="infoprice"><b>{{ product3.price | currency}}</b></p>
+						</div>
+						<div class="infoicon">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product4.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">
+							<p class="infodescription">{{ product4.description}}</p>
+							<p class="infoprice"><b>{{ product4.price | currency}}</b></p>
+						</div>
+						<div class="infoicon">
+							<i class="fa fa-star-o" aria-hidden="true"></i>
+						</div>
+					</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product5.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">
+							<p class="infodescription">{{ product5.description}}</p>
+							<p class="infoprice"><b>{{ product5.price | currency}}</b></p>
+						</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product6.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">
+							<p class="infodescription">{{ product6.description}}</p>
+							<p class="infoprice"><b>{{ product6.price | currency}}</b></p>
+						</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product7.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">	
+							<p class="infodescription">{{ product7.description}}</p>
+							<p class="infoprice"><b>{{ product7.price | currency}}</b></p>
+						</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product8.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">
+							<p class="infodescription">{{ product8.description}}</p>
+							<p class="infoprice"><b>{{ product8.price | currency}}</b></p>
+						</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-3">
+				<div class="hovereffect">
+					<img ng-src="{{product9.img}}" class="img-responsive">
+					<div class="overlay">
+						<a class="info" href="#">
+						<h2>SEE DETAILS</h2>
+						</a>
+					</div>
+				</div>
+					<div class="productinfo">
+						<div class="infowords">
+							<p class="infodescription">{{ product9.description}}</p>
+							<p class="infoprice"><b>{{ product9.price | currency }}</b></p>
+						</div>
+					<div class="infoicon">
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/myctrl.js"></script>
+</body>
+</html>
